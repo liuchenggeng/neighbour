@@ -1,0 +1,42 @@
+#
+#server:
+#  port: 7000
+#spring:
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://192.168.65.10:3306/gulimall_sms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+#    type: com.alibaba.druid.pool.DruidDataSource
+#  application:
+#    name: gulimall-coupon
+#
+#  jackson:
+#    time-zone: GMT+8
+#    date-format: yyyy-MM-dd HH:mm:ss
+#  resources:
+#    static-locations: classpath:/static/,classpath:/views/
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 169.254.68.20:8848
+##  host: localhost
+##  port: 27017
+##  auth: false #是否使用密码验证
+##  username: tincery
+##  password: renren
+##  source: 123456
+##  database: test
+#
+#mybatis-plus:
+#  mapperLocations: classpath:mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#
+#pagehelper:
+#  reasonable: true
+#  supportMethodsArguments: true
+#  params: count=countSql
+#
+#
+##指定数据库，可选值有【mysql、oracle、sqlserver、postgresql、mongodb】
