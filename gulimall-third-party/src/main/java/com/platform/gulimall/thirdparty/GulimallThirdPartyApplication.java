@@ -1,17 +1,15 @@
-package com.platform.gulimall.coupon;
+package com.platform.gulimall.thirdparty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 
-@RefreshScope
 @EnableDiscoveryClient
 @SpringBootApplication
-public class GulimallCouponApplication {
+public class GulimallThirdPartyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GulimallCouponApplication.class, args);
+        SpringApplication.run(GulimallThirdPartyApplication.class, args);
     }
 
 }

@@ -4,17 +4,24 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 169.254.68.20:8848
+        server-addr: 192.168.65.10:8848
     gateway:
       routes:
-        - id: test-route
-          uri: http://www.baidu.com
+        - id: product_route
+          uri: lb://gulimall-product
           predicates:
-            - Query=url,baidu
-        - id: qq-route
-          uri: http://www.qq.com
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+
+        - id: admin_role
+          uri: lb://renren-fast
           predicates:
-            - Query=url,qq
+            - Path=/api/**
+          filters:
+            - RewritePath=/api(?<segment>/?.*),/admin/$\{segment}
+
+
 
 server:
   port: 88

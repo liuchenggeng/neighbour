@@ -31,6 +31,15 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
+    @RequestMapping("/getCoupon")
+    //@RequiresPermissions("coupon:coupon:list")
+    public R getCoupon(){
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setId(1000L);
+        couponEntity.setCouponName("买一赠一");
+        return R.ok().put("data", Arrays.asList(couponEntity));
+    }
+
     /**
      * 列表
      */

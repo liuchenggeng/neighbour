@@ -1,6 +1,7 @@
 package com.platform.gulimall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -30,6 +31,16 @@ import com.platform.common.utils.R;
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
+
+
+    /**
+     * 获取类型的树形列表
+     */
+    @RequestMapping("/listTree")
+    public R listTree(){
+        List<CategoryEntity> categorys = categoryService.listWithTree();
+        return R.ok().put("categorys",categorys);
+    }
 
     /**
      * 列表
@@ -65,6 +76,17 @@ public class CategoryController {
         return R.ok();
     }
 
+
+    /**
+     * 修改
+     */
+    @RequestMapping("/batchUpdate")
+    //@RequiresPermissions("product:category:update")
+    public R batchUpdate(@RequestBody CategoryEntity[] category){
+        categoryService.updateBatchById(Arrays.asList(category));
+        return R.ok();
+    }
+
     /**
      * 修改
      */
@@ -80,10 +102,11 @@ public class CategoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
+        //1,如果有引用，不能删除
 
+		//categoryService.removeByIds(Arrays.asList(catIds));
+        categoryService.removeMenusByIds(Arrays.asList(catIds));
         return R.ok();
     }
 

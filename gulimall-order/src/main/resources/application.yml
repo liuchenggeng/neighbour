@@ -5,9 +5,6 @@ spring:
     url: jdbc:mysql://192.168.65.10:3306/gulimall_oms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-
-
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
@@ -39,5 +36,5 @@ pagehelper:
 renren:
   database: mysql
 server:
-  port: 9000
+  port: 11000
 
