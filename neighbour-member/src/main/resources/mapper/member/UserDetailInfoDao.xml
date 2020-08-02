@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.platform.neighbour.member.dao.UserDetailInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.platform.neighbour.member.entity.UserDetailInfoEntity" id="userDetailInfoMap">
+        <result property="id" column="id"/>
+        <result property="realName" column="real_name"/>
+        <result property="mobile" column="mobile"/>
+        <result property="mobileCode" column="mobile_code"/>
+        <result property="houseId" column="house_id"/>
+        <result property="status" column="status"/>
+        <result property="type" column="type"/>
+        <result property="imgUrl" column="img_url"/>
+        <result property="housingNum" column="housing_num"/>
+        <result property="pepNum" column="pep_num"/>
+        <result property="idCard" column="id_card"/>
+        <result property="idAddresss" column="id_addresss"/>
+        <result property="idCardImgA" column="id_card_img_a"/>
+        <result property="idCardImgB" column="id_card_img_b"/>
+        <result property="passportNum" column="passport_num"/>
+        <result property="passportImg" column="passport_img"/>
+        <result property="userType" column="user_type"/>
+        <result property="showStatus" column="show_status"/>
+        <result property="sort" column="sort"/>
+        <result property="createName" column="create_name"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateName" column="update_name"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+
+</mapper>
