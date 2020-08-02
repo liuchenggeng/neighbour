@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.platform.neighbour.house.dao.HouseDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.platform.neighbour.house.entity.HouseEntity" id="houseMap">
+        <result property="id" column="id"/>
+        <result property="provinceId" column="province_id"/>
+        <result property="cityId" column="city_id"/>
+        <result property="countyId" column="county_id"/>
+        <result property="houseName" column="house_name"/>
+        <result property="houseBuilder" column="house_builder"/>
+        <result property="houseBuildTime" column="house_build_time"/>
+        <result property="houseBrief" column="house_brief"/>
+        <result property="houseDetail" column="house_detail"/>
+        <result property="housePrice" column="house_price"/>
+        <result property="houseImgView" column="house_img_view"/>
+        <result property="propertyId" column="property_id"/>
+        <result property="propertyPrice" column="property_price"/>
+        <result property="showStatus" column="show_status"/>
+        <result property="sort" column="sort"/>
+        <result property="createName" column="create_name"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateName" column="update_name"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+
+</mapper>
