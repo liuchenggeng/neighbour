@@ -1,8 +1,8 @@
 spring:
   cloud:
     alicloud:
-      access-key: LTAI4Frcqx31CcNBY9n12wDz
-      secret-key: 4S5RDGuNWykcBUCaXAvrTzrJj1wZKN
+      access-key:
+      secret-key:
       oss:
         endpoint: oss-cn-shenzhen.aliyuncs.com
     nacos:
