@@ -1,8 +1,8 @@
 spring:
   cloud:
     alicloud:
-      access-key:
-      secret-key:
+      access-key:test
+      secret-key:test
       oss:
         endpoint: oss-cn-shenzhen.aliyuncs.com
     nacos:
